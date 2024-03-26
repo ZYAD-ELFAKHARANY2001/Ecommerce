@@ -1,0 +1,23 @@
+﻿@model ResultDataList<GetAllProductDTO>
+@{
+    ViewData["Title"] = "Index";
+}
+@Model.Count;
+<table>
+    @foreach (GetAllProductDTO r in Model.Entities)
+    {
+        <tr>
+        <td>
+            @r.Name
+        </td>
+        <td>
+            @r.Price
+        </td>
+            <td>
+                @r.CategoryName
+            </td>
+    </tr>
+    }
+</table>
+<h1>Index</h1>
+
